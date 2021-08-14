@@ -1,0 +1,23 @@
+canvas {
+    -webkit-tap-highlight-color: transparent;
+}
+.navbar-dark, .mb-1, .mb-2, .mb-2rem, .mb-4, .buttons-container, .footer {
+    display: none;
+    visibility: hidden;
+}
+
+#navDrawerToggle {
+    display: none;
+    visibility: hidden;
+}
+
+[data-react-class="InstrumentSearch"] {
+    display: none;
+    visibility: hidden;
+}
+
+
+.nav-drawer--active {
+    transform: translate3d(0, 0, 0);
+    overflow:scroll
+}

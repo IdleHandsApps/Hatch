@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eDu-rO-K4G">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WebViewController" customModule="Hatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CJR-bA-mKh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ck5-aN-cSS">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="0Oa-Do-6qE">
+                            <view key="customView" contentMode="scaleToFill" id="nsi-em-6AH">
+                                <rect key="frame" x="20" y="9.5" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IconClearSmall" translatesAutoresizingMaskIntoConstraints="NO" id="Ojh-FI-Sil">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="URLString" value="https://app.hatchinvest.nz/portfolio"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="-1602"/>
+        </scene>
+        <!--Portfolio-->
+        <scene sceneID="oAm-yp-x46">
+            <objects>
+                <navigationController id="ijh-pU-Ydd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Portfolio" image="Portfolio" id="i3o-eT-BM8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RAU-nW-1Kl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TH1-fY-1V3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2O-K0-yM8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-101" y="-1602"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="WBz-3M-3Ze">
+            <objects>
+                <tabBarController id="eDu-rO-K4G" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HtR-1Q-XkG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ijh-pU-Ydd" kind="relationship" relationship="viewControllers" id="FGl-Vk-Bfy"/>
+                        <segue destination="arE-7w-fxE" kind="relationship" relationship="viewControllers" id="C6i-Uq-QvV"/>
+                        <segue destination="F9k-m2-kr8" kind="relationship" relationship="viewControllers" id="ViI-TM-TJ6"/>
+                        <segue destination="CxG-Bh-GFj" kind="relationship" relationship="viewControllers" id="0Ua-hu-MXA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDd-Lb-wM4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-993" y="-607"/>
+        </scene>
+        <!--Drawer Web View Controller-->
+        <scene sceneID="388-9c-OAC">
+            <objects>
+                <viewController id="BXz-0k-bGy" customClass="DrawerWebViewController" customModule="Hatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3r9-ov-It9">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="da5-d7-lPW">
+                            <view key="customView" contentMode="scaleToFill" id="Pex-oX-J2a">
+                                <rect key="frame" x="20" y="9.5" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IconClearSmall" translatesAutoresizingMaskIntoConstraints="NO" id="vGH-xL-3kG">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="URLString" value="https://app.hatchinvest.nz/browse"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hh1-Uu-CBU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="394"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="16Z-aa-qaT">
+            <objects>
+                <navigationController id="CxG-Bh-GFj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="person" catalog="system" id="VtR-1V-Jac"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P3B-xf-9b2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BXz-0k-bGy" kind="relationship" relationship="rootViewController" id="Kjt-Bc-QJk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9C-dW-Bag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-101" y="393"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Bee-Xi-Y71">
+            <objects>
+                <viewController id="7ML-3d-X2v" customClass="WebViewController" customModule="Hatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ilL-JU-xlo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hVX-3V-Dla"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tum-bY-tXf">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="0Cv-k2-Pz4">
+                            <view key="customView" contentMode="scaleToFill" id="Hc9-jm-fbs">
+                                <rect key="frame" x="20" y="9.5" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IconClearSmall" translatesAutoresizingMaskIntoConstraints="NO" id="wUB-Pt-T6F">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="URLString" value="https://app.hatchinvest.nz/browse"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSG-48-2Uk" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920" y="-933"/>
+        </scene>
+        <!--Browse-->
+        <scene sceneID="Jee-IK-7Al">
+            <objects>
+                <navigationController id="arE-7w-fxE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Browse" image="magnifyingglass" catalog="system" id="gx2-kR-3aJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j1D-qT-aDK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7ML-3d-X2v" kind="relationship" relationship="rootViewController" id="Sq5-Wd-fpu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9eJ-Oj-Jz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106" y="-933"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="QSO-Tb-a80">
+            <objects>
+                <viewController id="cey-jc-ooF" customClass="WebViewController" customModule="Hatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1wN-CW-cjR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Wh3-cM-29S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jXg-r7-cze">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="S6R-wT-Tbb">
+                            <view key="customView" contentMode="scaleToFill" id="MFO-jd-XaT">
+                                <rect key="frame" x="20" y="9.5" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IconClearSmall" translatesAutoresizingMaskIntoConstraints="NO" id="rbr-5A-zRN">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="URLString" value="https://app.hatchinvest.nz/watchlist"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HtA-XG-16x" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="925" y="-268"/>
+        </scene>
+        <!--Watchlist-->
+        <scene sceneID="aT4-j0-nlg">
+            <objects>
+                <navigationController id="F9k-m2-kr8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Watchlist" image="heart" catalog="system" id="bWM-Ny-sIs"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G5f-Uf-2bu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cey-jc-ooF" kind="relationship" relationship="rootViewController" id="CNx-9S-3Tl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgg-UC-D7x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-101" y="-268"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="FRY-RJ-Gs9">
+            <objects>
+                <viewController id="FjT-g6-euM" customClass="WebViewController" customModule="Hatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yHP-ct-cgV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lTu-Tw-yFK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tc6-be-mgc"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="URLString" value="https://app.hatchinvest.nz/reports/orders"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VCf-gZ-bav" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="15f-ry-wsk">
+                    <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IconClearSmall" translatesAutoresizingMaskIntoConstraints="NO" id="xAv-U4-mlu">
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="KqI-dg-OMd"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="1900" y="394"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" name="AccentColor"/>
+    <resources>
+        <image name="IconClearSmall" width="25" height="25"/>
+        <image name="Portfolio" width="25" height="25"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <namedColor name="AccentColor">
+            <color red="0.63529411764705879" green="0.52549019607843139" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
