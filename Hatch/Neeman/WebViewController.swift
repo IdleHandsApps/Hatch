@@ -35,8 +35,10 @@ open class WebViewController: UIViewController,
      - parameter title: The value that the WKWebView updated its title property to.
      */
     @objc open func webView(_ webView: WKWebView, didChangeTitle title: String?) {
-        navigationItem.title = title?.replacingOccurrences(of: " | Hatch", with: "")
+        navigationItem.title = title?.replacingOccurrences(of: " | Hatch", with: "").capitalized
     }
+    
+    var tickerUrl: URL?
     
     // MARK: Outlets
     /// Shows that the web view is still loading the page.
@@ -129,6 +131,16 @@ open class WebViewController: UIViewController,
     override open func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tickerUrl = nil
+        if let tickerMatch = NSRegularExpression.getFirstMatch(input: self.URLString ?? "", pattern: ".*hatchinvest.nz\\/us\\/holdings\\/([A-Z]*)$") {
+            let urlString = "stocks://?symbol=\(tickerMatch)"
+            //let urlString2 = "https://finance.yahoo.com/quote/\(tickerMatch)"
+
+            if let tickerUrl = URL(string:urlString) {
+                self.tickerUrl = tickerUrl
+            }
+        }
+        
         setupWebView()
         setupRefreshControl()
         setupActivityIndicator()
@@ -136,6 +148,17 @@ open class WebViewController: UIViewController,
         addObservers()
         webViewObserver.delegate = self
         loadURL(rootURL)
+        setupBarItem()
+    }
+    
+    @objc func rightMenuItemSelected(){
+        UIApplication.shared.open(self.tickerUrl!)
+    }
+    
+    @objc open func setupBarItem() {
+        if self.tickerUrl != nil {
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(rightMenuItemSelected))
+        }
     }
     
     /**

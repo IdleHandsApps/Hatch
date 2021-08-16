@@ -40,6 +40,7 @@
 		36322DF126C6120400504FD9 /* WebViewController+WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36322DDA26C6120400504FD9 /* WebViewController+WebView.swift */; };
 		36322DF726C6166600504FD9 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36322DF526C6166600504FD9 /* WebViewController.xib */; };
 		36807FE226C7B15600E932F6 /* DrawerWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36807FE126C7B15500E932F6 /* DrawerWebViewController.swift */; };
+		36CE233B26C9F50E0065739D /* NSRegularExpression+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CE233A26C9F50E0065739D /* NSRegularExpression+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		36322DDA26C6120400504FD9 /* WebViewController+WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebViewController+WebView.swift"; sourceTree = "<group>"; };
 		36322DF526C6166600504FD9 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		36807FE126C7B15500E932F6 /* DrawerWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DrawerWebViewController.swift; path = Hatch/DrawerWebViewController.swift; sourceTree = SOURCE_ROOT; };
+		36CE233A26C9F50E0065739D /* NSRegularExpression+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				36322DC126C6120400504FD9 /* ProcessPool.swift */,
 				36322DC226C6120400504FD9 /* NeemanLocalizedString.swift */,
 				36322DC326C6120400504FD9 /* WebViewController+Errors.swift */,
+				36CE233A26C9F50E0065739D /* NSRegularExpression+Extensions.swift */,
 				36322DC426C6120400504FD9 /* Resources */,
 				36322DCE26C6120400504FD9 /* WebViewConfiguration.swift */,
 				36016CE726C633080046DF82 /* DrawerWebViewConfiguration.swift */,
@@ -263,6 +266,7 @@
 				36807FE226C7B15600E932F6 /* DrawerWebViewController.swift in Sources */,
 				36016CE826C633080046DF82 /* DrawerWebViewConfiguration.swift in Sources */,
 				36322DDB26C6120400504FD9 /* ProcessPool.swift in Sources */,
+				36CE233B26C9F50E0065739D /* NSRegularExpression+Extensions.swift in Sources */,
 				36322DAC26C611DF00504FD9 /* AppDelegate.swift in Sources */,
 				36322DEA26C6120400504FD9 /* Injector.swift in Sources */,
 				36322DEB26C6120400504FD9 /* WebViewController+Popup.swift in Sources */,
@@ -428,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B55CT27HU5;
 				INFOPLIST_FILE = Hatch/Info.plist;
@@ -437,6 +442,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.idlehandsapps.Hatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B55CT27HU5;
 				INFOPLIST_FILE = Hatch/Info.plist;
@@ -456,6 +463,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.idlehandsapps.Hatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,12 +1,37 @@
 canvas {
     -webkit-tap-highlight-color: transparent;
 }
-.navbar-dark, .mb-1, .mb-2, .mb-2rem, .mb-4, .buttons-container, .footer {
+.navbar-dark, .mb-1, .mb-2rem, .buttons-container, .footer, #navDrawerToggle {
     display: none;
     visibility: hidden;
 }
 
-#navDrawerToggle {
+.portfolio-container * .mb-4 {
+    display: none;
+    visibility: hidden;
+}
+
+.my-3 * .text-left {
+    display: none;
+    visibility: hidden;
+}
+
+.mt-3 > .h4 {
+    display: none;
+    visibility: hidden;
+}
+
+.investment-overview > .pb-5 {
+    display: none;
+    visibility: hidden;
+}
+
+[data-react-class="Watchlist"] * .mb-2 {
+    display: none;
+    visibility: hidden;
+}
+
+[data-react-class="BackButton"] {
     display: none;
     visibility: hidden;
 }
